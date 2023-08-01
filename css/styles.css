@@ -98,6 +98,56 @@ select:-webkit-autofill:focus {
 }
 
 
+/* BUTTON */
+.button {
+  display: inline-block;
+  padding: 0;
+  border: 0;
+  font-size: 16px;
+  line-height: normal;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 10px;
+  background-color: transparent;
+  background-color: var(--accent-color);
+  overflow: hidden;
+  text-align: center;
+}
+
+.button--block {
+  display: flex;
+  width: 100%;
+}
+.button--wide {
+  min-width: 272px;
+}
+
+.button:hover {
+  background-color: var(--accent-color-hover);
+}
+
+.button:active {
+  transform: translateY(1.5px);
+}
+
+.button__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.button__prepend {
+  margin-right: 16px;
+}
+
+.button__icon {
+
+}
+
 /* CONTAINER */
 .container {
   width: 100%;
@@ -215,6 +265,73 @@ select:-webkit-autofill:focus {
 
 
 
+/* Shopping cart products */
+.shopping-cart__products {
+  margin-bottom: 24px;
+}
+
+.shopping-cart-products {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 24px;
+  list-style: none;
+}
+
+.shopping-cart-products__item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+
+/* ITEM-SHOPPING-CART-PRODUCTS */
+.item-shopping-cart-products {
+  display: flex;
+  align-items: flex-start;
+}
+
+.item-shopping-cart-products__img {
+  margin-right: 16px;
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.item-shopping-cart-products__info {
+  flex-grow: 1;
+  width: 100%;
+  margin-right: 18px;
+  overflow: hidden;
+}
+
+.item-shopping-cart-products__name {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-transform: capitalize;
+}
+
+b {
+  color: var(--black);
+}
+
+.item-shopping-cart-products__remove-button {
+  align-self: center;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.item-shopping-cart-products__remove-button:active {
+  transform: translateY(1px);
+}
+
+.item-shopping-cart-products__remove-icon {
+  display: block;
+  width: 14px;
+  height: 16px;
+}
 
 /* SHOPPING CART MODAL */
 .site-header__cart-modal {
