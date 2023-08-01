@@ -39,7 +39,7 @@
         </nav>
 
         <!-- SHOPPING CART -->
-        <div class="site-header__cart site-header__cart--empty">
+        <div class="site-header__cart">
           <!-- site-header__cart--empty -->
           <a class="site-header__cart-link" href="" aria-label="Shopping cart">
             <span class="site-header__cart-product-count">3</span>
@@ -48,13 +48,50 @@
 
           <!-- CART MODAL -->
           <div class="site-header__cart-modal">
-            <section class="shopping-cart shopping-cart--modal shopping-cart--empty">
+            <section class="shopping-cart shopping-cart--modal">
               <header class="shopping-cart__header">
                 <h2 class="shopping-cart__title">Cart</h2>
               </header>
               <div class="shopping-cart__inner">
                 <!-- Empty -->
                 <div class="shopping-cart__empty">Your cart is empty.</div>
+
+                <!-- Has items -->
+                <div class="shopping-cart__content">
+                  <ul class="shopping-cart-products">
+                    <li class="shopping-cart-products__item">
+                      <div class="item-shopping-cart-products">
+                        <img class="item-shopping-cart-products__img" src="img/cart-item-img.jpg" alt="" width="50" height="50">
+
+                        <div class="item-shopping-cart-products__info">
+                          <div class="item-shopping-cart-products__name">Fall Limited Edition Sneakers</div>
+                          <div class="item-shopping-cart-products__cost">$125.00 x 3 <b>$375.00</b></div>
+
+                          <!-- Delete icon -->
+                          <button class="item-shopping-cart-products__remove-button" type="button">
+                            <svg class="item-shopping-cart-products__remove-icon" xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="14"><path d="M261-120q-24.75 0-42.375-17.625T201-180v-570h-41v-60h188v-30h264v30h188v60h-41v570q0 24-18 42t-42 18H261Zm438-630H261v570h438v-570ZM367-266h60v-399h-60v399Zm166 0h60v-399h-60v399ZM261-750v570-570Z"/></svg>
+                          </button>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="shopping-cart-products__item">
+                      <div class="item-shopping-cart-products">
+                        <img class="item-shopping-cart-products__img" src="img/cart-item-img.jpg" alt="" width="50" height="50">
+
+                        <div class="item-shopping-cart-products__info">
+                          <div class="item-shopping-cart-products__name">Fall Limited Edition Sneakers</div>
+                          <div class="item-shopping-cart-products__cost">$125.00 x 3 <b>$375.00</b></div>
+
+                          <!-- Delete icon -->
+                          <button class="item-shopping-cart-products__remove-button" type="button">
+                            <svg class="item-shopping-cart-products__remove-icon" xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="14"><path d="M261-120q-24.75 0-42.375-17.625T201-180v-570h-41v-60h188v-30h264v30h188v60h-41v570q0 24-18 42t-42 18H261Zm438-630H261v570h438v-570ZM367-266h60v-399h-60v399Zm166 0h60v-399h-60v399ZM261-750v570-570Z"/></svg>
+                          </button>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </section>
           </div>

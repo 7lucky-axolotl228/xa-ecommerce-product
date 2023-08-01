@@ -269,6 +269,10 @@ select:-webkit-autofill:focus {
   font-weight: 700;
 }
 
+.shopping-cart--empty .shopping-cart__content {
+  display: none;
+}
+
 
 
 
