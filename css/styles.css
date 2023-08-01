@@ -1,5 +1,8 @@
 :root {
-  --brand-color: #ff7e1b;
+  --accent-color: #ff7e1b;
+  --accent-color-hover: #ffab6a;
+  --accent-color-light: #ffeee2;
+  --light-bg: #f6f8fd;
   --text-color: #69707d;
   --black: #1d2026;
 }
@@ -11,8 +14,7 @@ html {
 }
 
 *:focus {
-  outline: 2px dotted orchid;
-  outline-offset: 2px;
+  outline: none;
 }
 
 *,
@@ -31,7 +33,7 @@ body {
   font-size: 16px;
   line-height: 25px;
   background-color: #fff;
-  color: #222;
+  color: var(--text-color);
 }
 
 img {
