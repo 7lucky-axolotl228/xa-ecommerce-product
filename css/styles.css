@@ -561,16 +561,3 @@ only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
 
 }
-
-/* input:not(:focus):not(:placeholder-shown):valid {
-  border-color: greenyellow;
-}
-input:not(:focus):not(:placeholder-shown):invalid {
-  border-color: red;
-}
-
-input:focus + .validation-error,
-input:valid + .validation-error,
-input:placeholder-shown + .validation-error {
-  display: none;
-} */
