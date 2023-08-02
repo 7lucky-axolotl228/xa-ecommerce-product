@@ -425,6 +425,30 @@ b {
 
 
 
+/* PRODUCT PAGE */
+.product-page {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+.product-page-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1063px;
+}
+
+.product-page__gallery {
+  width: 100%;
+  max-width: 445px;
+  margin-right: 48px;
+}
+
+.product-page__info {
+  width: 100%;
+  max-width: 445px;
+}
+
+
 
 
 @media
