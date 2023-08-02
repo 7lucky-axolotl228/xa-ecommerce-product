@@ -25,6 +25,7 @@ if (elSiteHeaderCartLink) {
 
 
 /* ImgShowcase */
+const elImgShowcaseActiveImg = document.querySelector('.img-showcase__active-img');
 const elsImgThumbnail = document.querySelectorAll('.img-showcase__thumbnail');
 const elsImgShowcaseThumbnailBtn = document.querySelectorAll('.img-showcase__thumbnail-btn');
 
@@ -36,5 +37,8 @@ elsImgShowcaseThumbnailBtn.forEach(function (elButton) {
 
     /* Add --active class to buttons */
     elButton.closest('.img-showcase__thumbnail').classList.add(modifiers.imgThumbnailActive);
+
+    /* Update active img src */
+    elImgShowcaseActiveImg.src = elButton.dataset.imgBig;
   });
 });
