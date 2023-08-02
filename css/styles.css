@@ -335,7 +335,11 @@ b {
 
 /* SHOPPING CART MODAL */
 .site-header__cart-modal {
+  display: none;
+}
+.site-header__cart-modal--open {
   position: absolute;
+  display: block;
   top: 94px;
   right: -76px;
   width: 360px;
@@ -408,6 +412,10 @@ b {
 
 .site-header__profile-link:hover {
   border-color: var(--accent-color);
+}
+
+.site-header__profile-link:active {
+  opacity: 0.6;
 }
 
 .site-header__profile-avatar {
