@@ -61,3 +61,23 @@ if (elButtonClose) {
     elLightbox.classList.remove(modifiers.lightboxOpen);
   });
 }
+
+const elImgLightboxActiveImg = elLightbox.querySelector('.img-showcase__active-img');
+const elsImgLightboxThumbnailBtn = elLightbox.querySelectorAll('.js-img-showcase__thumbnail-btn');
+const elsLightboxImgThumbnail = elLightbox.querySelectorAll('.img-showcase__thumbnail');
+
+
+elsImgLightboxThumbnailBtn.forEach(function (elButton) {
+  elButton.addEventListener('click', function () {
+    /* Remove active class from btn */
+    elsLightboxImgThumbnail.forEach(function (elImgThumbnail) {
+      elImgThumbnail.classList.remove(modifiers.imgThumbnailActive);
+    });
+
+    /* Add --active class to buttons */
+    elButton.closest('.img-showcase__thumbnail').classList.add(modifiers.imgThumbnailActive);
+
+    /* Update active img src */
+    elImgLightboxActiveImg.src = elButton.dataset.imgBig;
+  });
+});
