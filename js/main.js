@@ -29,7 +29,7 @@ if (elSiteHeaderCartLink) {
 /* ImgShowcase */
 const elImgShowcaseActiveImg = document.querySelector('.img-showcase__active-img');
 const elsImgThumbnail = document.querySelectorAll('.img-showcase__thumbnail');
-const elsImgShowcaseThumbnailBtn = document.querySelectorAll('.img-showcase__thumbnail-btn');
+const elsImgShowcaseThumbnailBtn = document.querySelectorAll('.js-img-showcase__thumbnail-btn');
 
 
 elsImgShowcaseThumbnailBtn.forEach(function (elButton) {
