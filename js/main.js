@@ -1,6 +1,7 @@
 /* Variables */
 const modifiers = {
   lightboxOpen: 'lightbox--open',
+  siteHeaderCartModalOpen: 'site-header__cart-modal--open',
   imgThumbnailActive: 'img-showcase__thumbnail--active'
 };
 
@@ -20,7 +21,7 @@ if (elSiteHeaderCartLink) {
   elSiteHeaderCartLink.addEventListener('click', function (evt) {
     evt.preventDefault();
 
-    elSiteHeaderCartModal.classList.toggle('site-header__cart-modal--open');
+    elSiteHeaderCartModal.classList.toggle(modifiers.siteHeaderCartModalOpen);
   });
 }
 
