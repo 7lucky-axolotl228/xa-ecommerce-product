@@ -31,7 +31,6 @@ const elImgShowcaseActiveImg = document.querySelector('.img-showcase__active-img
 const elsImgThumbnail = document.querySelectorAll('.img-showcase__thumbnail');
 const elsImgShowcaseThumbnailBtn = document.querySelectorAll('.js-img-showcase__thumbnail-btn');
 
-
 elsImgShowcaseThumbnailBtn.forEach(function (elButton) {
   elButton.addEventListener('click', function (evt) {
     /* Remove active class from btn */
@@ -63,7 +62,7 @@ if (elButtonClose) {
 }
 
 const elImgLightboxActiveImg = elLightbox.querySelector('.img-showcase__active-img');
-const elsImgLightboxThumbnailBtn = elLightbox.querySelectorAll('.js-img-showcase__thumbnail-btn');
+const elsImgLightboxThumbnailBtn = elLightbox.querySelectorAll('.js-img-lightbox__thumbnail-btn');
 const elsLightboxImgThumbnail = elLightbox.querySelectorAll('.img-showcase__thumbnail');
 
 
