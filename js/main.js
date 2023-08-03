@@ -42,3 +42,20 @@ elsImgShowcaseThumbnailBtn.forEach(function (elButton) {
     elImgShowcaseActiveImg.src = elButton.dataset.imgBig;
   });
 });
+
+/* OPEN LIGHTBOX */
+const elButtonClose = document.querySelector('.js-lightbox__close');
+const elLightbox = document.querySelector('.lightbox');
+const elLightboxToggler = document.querySelector('.js-lightbox-toggler');
+
+if (elLightboxToggler) {
+  elLightboxToggler.addEventListener('click', function () {
+    elLightbox.classList.add('lightbox--open');
+  });
+}
+
+if (elButtonClose) {
+  elButtonClose.addEventListener('click', function () {
+    elLightbox.classList.remove('lightbox--open');
+  });
+}
