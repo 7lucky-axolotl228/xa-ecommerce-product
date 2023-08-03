@@ -450,11 +450,18 @@ b {
 
 
 /* GALLERY | IMG SHOWCASE */
+.img-showcase--lightbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .img-showcase__showcase {
   position: relative;
   z-index: 10;
   margin-bottom: 32px;
 }
+
 
 .img-showcase__lightbox-toggle {
   position: absolute;
@@ -479,6 +486,12 @@ b {
   cursor: pointer;
 }
 
+.img-showcase--lightbox .img-showcase__active-img {
+  width: 550px;
+  height: 550px;
+  border-radius: 20px;
+}
+
 .img-showcase__thumbnails {
   display: flex;
   align-items: center;
@@ -487,6 +500,10 @@ b {
   margin: 0;
   list-style: none;
   overflow: auto;
+}
+
+.img-showcase--lightbox .img-showcase__thumbnails {
+  max-width: 550px;
 }
 
 /* SCROLLBAR */
@@ -563,6 +580,96 @@ b {
   object-fit: cover;
 }
 
+
+/* LIGHTBOX */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.lightbox--open {
+  display: block;
+}
+
+.lightbox__inner {
+  width: 100%;
+  max-width: 550px;
+  margin: 90px auto;
+}
+
+.lightbox__close {
+  display: block;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: 0;
+  margin-left: auto;
+  margin-bottom: 24px;
+  cursor: pointer;
+  color: #d8d8d8;
+  background-color: transparent;
+}
+
+.lightbox__close:hover {
+  color: var(--accent-color);
+}
+.lightbox__close:active {
+  opacity: 0.6;
+}
+
+.lightbox__close-icon {
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
+/* CONTROL BUTONS */
+.img-showcase__control {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  border-radius: 50%;
+  color: var(--black);
+  background-color: transparent;
+}
+
+.img-showcase__control:hover {
+  color: var(--accent-color);
+}
+.img-showcase__control:active {
+  opacity: 0.7;
+}
+
+.img-showcase__control-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.img-showcase__control--prev {
+  left: -28px;
+}
+.img-showcase__control--next {
+  right: -28px;
+}
+.img-showcase__control-icon {
+  display: block;
+}
 
 
 
