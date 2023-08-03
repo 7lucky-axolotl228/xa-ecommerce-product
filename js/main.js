@@ -1,5 +1,6 @@
 /* Variables */
 const modifiers = {
+  lightboxOpen: 'lightbox--open',
   imgThumbnailActive: 'img-showcase__thumbnail--active'
 };
 
@@ -50,12 +51,12 @@ const elLightboxToggler = document.querySelector('.js-lightbox-toggler');
 
 if (elLightboxToggler) {
   elLightboxToggler.addEventListener('click', function () {
-    elLightbox.classList.add('lightbox--open');
+    elLightbox.classList.add(modifiers.lightboxOpen);
   });
 }
 
 if (elButtonClose) {
   elButtonClose.addEventListener('click', function () {
-    elLightbox.classList.remove('lightbox--open');
+    elLightbox.classList.remove(modifiers.lightboxOpen);
   });
 }
