@@ -97,10 +97,11 @@ if (elLightboxContolNext) {
     /* CHECK if there are elements after this element */
     if (elActiveItem.nextElementSibling === null) {
       elsLightboxImgThumbnail[0].classList.add(modifiers.imgThumbnailActive)
+    } else {
+      /* Make next element active */
+      elActiveItem.nextElementSibling.classList.add(modifiers.imgThumbnailActive);
     }
 
-    /* Make next element active */
-    elActiveItem.nextElementSibling.classList.add(modifiers.imgThumbnailActive);
   })
 }
 
@@ -114,8 +115,10 @@ if (elLightboxContolPrev) {
 
     if (elActiveItem.previousElementSibling === null) {
       elsLightboxImgThumbnail[3].classList.add(modifiers.imgThumbnailActive)
+    } else {
+      /* Make previous element active */
+      elActiveItem.previousElementSibling.classList.add(modifiers.imgThumbnailActive);
     }
 
-    elActiveItem.previousElementSibling.classList.add(modifiers.imgThumbnailActive);
   })
 }
