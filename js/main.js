@@ -27,8 +27,9 @@ if (elSiteHeaderCartLink) {
 
 
 /* ImgShowcase */
+const elProductPageGallery = document.querySelector('.product-page__gallery');
 const elImgShowcaseActiveImg = document.querySelector('.img-showcase__active-img');
-const elsImgThumbnail = document.querySelectorAll('.img-showcase__thumbnail');
+const elsImgThumbnail = elProductPageGallery.querySelectorAll('.img-showcase__thumbnail');
 const elsImgShowcaseThumbnailBtn = document.querySelectorAll('.js-img-showcase__thumbnail-btn');
 
 elsImgShowcaseThumbnailBtn.forEach(function (elButton) {
