@@ -94,14 +94,20 @@ if (elLightboxContolNext) {
 
     elActiveItem.classList.remove(modifiers.imgThumbnailActive);
 
+    let elNextActiveItem;
+
     /* CHECK if there are elements after this element */
     if (elActiveItem.nextElementSibling === null) {
-      elsLightboxImgThumbnail[0].classList.add(modifiers.imgThumbnailActive)
+      elNextActiveItem = elsLightboxImgThumbnail[0];
     } else {
       /* Make next element active */
-      elActiveItem.nextElementSibling.classList.add(modifiers.imgThumbnailActive);
+      elNextActiveItem = elActiveItem.nextElementSibling;
     }
 
+    elNextActiveItem.classList.add(modifiers.imgThumbnailActive)
+
+    /* Update active img src */
+    elImgLightboxActiveImg.src = elNextActiveItem.querySelector('.js-img-lightbox__thumbnail-btn').dataset.imgBig;
   })
 }
 
@@ -113,12 +119,18 @@ if (elLightboxContolPrev) {
 
     elActiveItem.classList.remove(modifiers.imgThumbnailActive);
 
+    let elNextActiveItem;
+
     if (elActiveItem.previousElementSibling === null) {
-      elsLightboxImgThumbnail[3].classList.add(modifiers.imgThumbnailActive)
+      elNextActiveItem = elsLightboxImgThumbnail[3];
     } else {
-      /* Make previous element active */
-      elActiveItem.previousElementSibling.classList.add(modifiers.imgThumbnailActive);
+      elNextActiveItem = elActiveItem.previousElementSibling;
     }
 
+    /* Make previous element active */
+    elNextActiveItem.classList.add(modifiers.imgThumbnailActive);
+
+    /* Update active img src */
+    elImgLightboxActiveImg.src = elNextActiveItem.querySelector('.js-img-lightbox__thumbnail-btn').dataset.imgBig;
   })
 }
