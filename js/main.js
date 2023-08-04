@@ -61,6 +61,7 @@ if (elButtonClose) {
   });
 }
 
+/* LIGHTBOX SHOWCASE */
 const elImgLightboxActiveImg = elLightbox.querySelector('.img-showcase__active-img');
 const elsImgLightboxThumbnailBtn = elLightbox.querySelectorAll('.js-img-lightbox__thumbnail-btn');
 const elsLightboxImgThumbnail = elLightbox.querySelectorAll('.img-showcase__thumbnail');
@@ -80,3 +81,15 @@ elsImgLightboxThumbnailBtn.forEach(function (elButton) {
     elImgLightboxActiveImg.src = elButton.dataset.imgBig;
   });
 });
+
+/* LIGHTBOX CONTROL */
+const elLightboxContolPrev = elLightbox.querySelector('.js-lightbox-contol--prev');
+const elLightboxContolNext = elLightbox.querySelector('.js-lightbox-contol--next');
+
+if (elLightboxContolNext) {
+  elLightboxContolNext.addEventListener('click', function () {
+    const elActiveItem = elLightbox.querySelector('.img-showcase__thumbnail--active');
+    elActiveItem.classList.remove(modifiers.imgThumbnailActive);
+    elActiveItem.nextElementSibling.classList.add(modifiers.imgThumbnailActive);
+  })
+}
