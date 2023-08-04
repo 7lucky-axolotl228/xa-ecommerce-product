@@ -93,3 +93,11 @@ if (elLightboxContolNext) {
     elActiveItem.nextElementSibling.classList.add(modifiers.imgThumbnailActive);
   })
 }
+
+if (elLightboxContolPrev) {
+  elLightboxContolPrev.addEventListener('click', function () {
+    const elActiveItem = elLightbox.querySelector('.img-showcase__thumbnail--active');
+    elActiveItem.classList.remove(modifiers.imgThumbnailActive);
+    elActiveItem.previousElementSibling.classList.add(modifiers.imgThumbnailActive);
+  })
+}
