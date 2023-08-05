@@ -507,7 +507,6 @@ del {
 /* INFO ACTIONS */
 .product-info__cart-actions {
   display: flex;
-  align-items: center;
   margin-top: 32px;
 }
 
@@ -521,6 +520,7 @@ del {
 }
 
 .product-info__quantity-button {
+  display: block;
   width: 52px;
   border: 0;
   padding: 0;

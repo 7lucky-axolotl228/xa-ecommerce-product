@@ -135,3 +135,27 @@ if (elLightboxContolPrev) {
     elImgLightboxActiveImg.src = elNextActiveItem.querySelector('.js-img-lightbox__thumbnail-btn').dataset.imgBig;
   })
 }
+
+
+/* PLUS MINUS QUANTITY */
+const elProductQty = document.querySelector('.product-info__quantity');
+const elQtyMinusButton = document.querySelector('.js-product-quantity-minus--button');
+const elQtyPlusButton = document.querySelector('.js-product-quantity-plus--button');
+
+if (elQtyPlusButton) {
+  elQtyPlusButton.addEventListener('click', function () {
+
+    elProductQty.textContent = parseInt(elProductQty.textContent, 10) + 1;
+    console.log(parseInt(elProductQty.textContent, 10) + 1);
+  });
+}
+
+if (elQtyMinusButton) {
+  elQtyMinusButton.addEventListener('click', function () {
+    const qty = parseInt(elProductQty.textContent, 10);
+
+    if (qty > 0) {
+      elProductQty.textContent = qty - 1;
+    }
+  });
+}
